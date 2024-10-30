@@ -124,17 +124,40 @@
       border-radius: 8px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       scroll-margin-top: 140px;
+      text-align: justify;
+      line-height: 1.6;
+      font-size: 1.1em;
     }
 
     h1, h2 {
       font-family: 'Maragsa', sans-serif;
       color: #464941;
+      text-align: center;
     }
 
-    p {
-      line-height: 1.6;
-      font-size: 1.1em;
-      text-align: justify;
+    /* Spezifisches Styling für Zitate */
+    .quote {
+      font-style: italic;
+      font-size: 1.3em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .quote-author {
+      font-size: 1em;
+      text-align: center;
+      display: block;
+      margin-top: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #5a7a4f;
     }
 
     /* Responsive Design Anpassungen */
@@ -202,7 +225,8 @@
 <!-- Startseite Section -->
 <section id="home">
   <h1>Willkommen in der Naturheilpraxis Belya!</h1>
-  <p>„Allah hat sowohl die Krankheit als auch die Heilung erschaffen.“ - Hz. Muhammed (s.a.v.)</p>
+  <p class="quote">„Allah hat sowohl die Krankheit als auch die Heilung erschaffen.“</p>
+  <span class="quote-author">- Hz. Muhammed (s.a.v.)</span>
   <p>In meiner Praxis steht Ihre Gesundheit und Ihr Wohlbefinden im Mittelpunkt. Mit individuell abgestimmten Behandlungen begleite ich Sie auf Ihrem Weg zu mehr Balance und Lebensqualität.</p>
 </section>
 
