@@ -150,14 +150,19 @@
       margin-top: 5px;
     }
 
-    ul {
-      padding-left: 20px;
-      list-style-type: none;
+    /* Über mich Styling */
+    #ueber-mich-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: justify;
     }
 
-    ul li::before {
-      content: "• ";
-      color: #5a7a4f;
+    #ueber-mich-content img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     /* Responsive Design Anpassungen */
@@ -190,6 +195,12 @@
 
       .quote {
         font-size: 1.3em;
+      }
+
+      /* Über mich Section im mobilen Format */
+      #ueber-mich-content {
+        flex-direction: column;
+        text-align: center;
       }
     }
 
@@ -238,16 +249,19 @@
     <li><strong>Blutegeltherapie</strong> – Natürliche Methode zur Entgiftung und Schmerzlinderung.</li>
     <li><strong>Infusionen (z.B. Vitamin C)</strong> – Zur Stärkung des Immunsystems und Förderung der Vitalität.</li>
     <li><strong>Lymphdrainage</strong> – Unterstützt das Lymphsystem und fördert den Abtransport von Schlacken.</li>
-    <li><strong>Schröpfen</strong> – Zur Förderung der Durchblutung und Linderung von Verspannungen.</li>
-    <li><strong>Beratungen</strong> – Individuelle Beratungen zu Ernährung, Gesundheit und Familienfragen.</li>
+    <li><strong>Schröpfen</strong> – Verschiedene Techniken zur Förderung der Durchblutung und Linderung von Verspannungen.</li>
+    <li><strong>Beratungen</strong> – Individuelle Beratungen zu Ernährung, psychischer Gesundheit und Familienfragen.</li>
   </ul>
   <p>Jede Behandlung wird auf Ihre persönlichen Bedürfnisse abgestimmt, um bestmögliche Resultate zu erzielen.</p>
 </section>
 
-<!-- Über mich Section -->
+<!-- Über mich Section mit Bild -->
 <section id="ueber-mich">
   <h2>Über mich</h2>
-  <p>Mein Name ist Sükran Uzel. Ich bin angelernte Hebamme und war später als Betreuungsassistentin tätig. Heute arbeite ich als Heilpraktikerin und begleite Sie mit einem ganzheitlichen Blick auf Ihre Gesundheit. Mit meiner langjährigen Erfahrung unterstütze ich Sie gerne auf Ihrem Weg zu mehr Wohlbefinden und Vitalität.</p>
+  <div id="ueber-mich-content">
+    <img src="images/uzel.jpeg" alt="Bild von Sükran Uzel">
+    <p>Mein Name ist Sükran Uzel. Ich bin angelernte Hebamme und war später als Betreuungsassistentin tätig. Heute arbeite ich als Heilpraktikerin und begleite Sie mit einem ganzheitlichen Blick auf Ihre Gesundheit. Mit meiner langjährigen Erfahrung unterstütze ich Sie gerne auf Ihrem Weg zu mehr Wohlbefinden und Vitalität.</p>
+  </div>
 </section>
 
 <!-- Kontakt Section -->
