@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belya Naturheilpraxis</title>
+  
+  <!-- Lokale Einbindung der Schriftarten Maragsa und Garet von Canva -->
+  <style>
+    /* Font-Face für Maragsa und Garet hinzufügen */
+    @font-face {
+      font-family: 'Maragsa';
+      src: url('fonts/Maragsa.ttf') format('truetype'); /* Passe den Pfad an, falls nötig */
+    }
+    
+    @font-face {
+      font-family: 'Garet';
+      src: url('fonts/Garet.ttf') format('truetype'); /* Passe den Pfad an, falls nötig */
+    }
+
+    /* Grundlegendes Styling */
+    body {
+      font-family: 'Garet', sans-serif;
+      color: #464941;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #f6eedf;
+    }
+
+    /* Header und Navigation */
+    header {
+      background-color: #f6eedf; /* Hintergrundfarbe passend zur Vorgabe */
+      color: #464941; /* Textfarbe für Navigation */
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav a {
+      color: #464941;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Maragsa', sans-serif; /* Maragsa für die Navigation */
+    }
+
+    header nav a:hover {
+      color: #5a7a4f; /* Grünton beim Hover */
+    }
+
+    /* Sektionen Styling */
+    section {
+      padding: 100px 20px;
+      margin-top: 60px; /* Platz für die feste Navigation */
+      font-family: 'Garet', sans-serif;
+    }
+
+    #home {
+      background-color: #f6eedf;
+    }
+
+    #behandlungen {
+      background-color: #f6eedf;
+    }
+
+    #ueber-mich {
+      background-color: #f6eedf;
+    }
+
+    #kontakt {
+      background-color: #f6eedf;
+    }
+
+    h1, h2 {
+      font-family: 'Maragsa', sans-serif;
+      color: #464941;
+    }
+
+    p {
+      color: #464941;
+      font-family: 'Garet', sans-serif;
+    }
+
+    /* Button Styling */
+    button {
+      background-color: #5a7a4f;
+      color: #f6eedf;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-family: 'Maragsa', sans-serif;
+    }
+
+    button:hover {
+      background-color: #464941;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header mit Navigation -->
+<header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#behandlungen">Behandlungen</a>
+    <a href="#ueber-mich">Über mich</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<!-- Startseite Sektion -->
+<section id="home">
+  <h1>Belya Naturheilpraxis</h1>
+  <p>Ihre Gesundheit in harmonischen Händen. Entdecken Sie unsere natürlichen Behandlungsmethoden.</p>
+</section>
+
+<!-- Behandlungen Sektion -->
+<section id="behandlungen">
+  <h2>Behandlungen</h2>
+  <p>Hier finden Sie eine Übersicht unserer Behandlungsmethoden und Therapien.</p>
+</section>
+
+<!-- Über mich Sektion -->
+<section id="ueber-mich">
+  <h2>Über mich</h2>
+  <p>Erfahren Sie mehr über meine Erfahrung und meinen Ansatz in der Naturheilkunde.</p>
+</section>
+
+<!-- Kontakt Sektion -->
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Kontaktieren Sie uns für Termine und weitere Informationen.</p>
+  <button>Jetzt Kontakt aufnehmen</button>
+</section>
+
+</body>
+</html>
