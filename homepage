@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belya Naturheilpraxis</title>
+  <style>
+    /* Grundlegendes Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    /* Header und Navigation */
+    header {
+      background-color: #8DBE7D; /* Beispiel-Grünton passend zum Logo */
+      color: #fff;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #557A3D; /* Dunklerer Grünton für Hover-Effekt */
+    }
+
+    /* Sektionen Styling */
+    section {
+      padding: 100px 20px;
+      margin-top: 60px; /* Platz für die feste Navigation */
+    }
+
+    #home {
+      background-color: #F2F2F2;
+    }
+
+    #behandlungen {
+      background-color: #E8F5E9;
+    }
+
+    #ueber-mich {
+      background-color: #E0E0E0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header mit Navigation -->
+<header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#behandlungen">Behandlungen</a>
+    <a href="#ueber-mich">Über mich</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<!-- Startseite Sektion -->
+<section id="home">
+  <h1>Willkommen bei Belya Naturheilpraxis</h1>
+  <p>Ihre Gesundheit in harmonischen Händen. Entdecken Sie unsere natürlichen Behandlungsmethoden.</p>
+</section>
+
+<!-- Behandlungen Sektion -->
+<section id="behandlungen">
+  <h2>Behandlungen</h2>
+  <p>Hier finden Sie eine Übersicht unserer Behandlungsmethoden und Therapien.</p>
+  <!-- Details zu den Behandlungen -->
+</section>
+
+<!-- Über mich Sektion -->
+<section id="ueber-mich">
+  <h2>Über mich</h2>
+  <p>Erfahren Sie mehr über meine Erfahrung und meinen Ansatz in der Naturheilkunde.</p>
+  <!-- Weitere Informationen über die Person -->
+</section>
+
+<!-- Kontakt Sektion -->
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Kontaktieren Sie uns für Termine und weitere Informationen.</p>
+  <!-- Kontaktformular -->
+</section>
+
+</body>
+</html>
