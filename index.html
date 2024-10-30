@@ -34,7 +34,7 @@
     header {
       background-color: #f6eedf;
       color: #464941;
-      padding: 10px 20px;
+      padding: 20px 20px;
       position: fixed;
       width: 100%;
       top: 0;
@@ -42,14 +42,19 @@
       z-index: 1000;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center; /* Navigation zentriert */
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     /* Logo Styling */
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+    }
+
     .logo img {
-      height: 125px; /* Logo etwas kleiner */
-      margin-left: 10px;
+      height: 100px; /* Größeres Logo */
     }
 
     /* Navigation Styling */
@@ -73,7 +78,7 @@
 
     /* Globales Section-Design */
     section {
-      padding: 80px 20px; /* Gleichmäßiges Padding für alle Sections */
+      padding: 80px 20px;
       max-width: 800px;
       margin: 160px auto 40px auto; /* Abstand von Header */
       font-family: 'Garet', sans-serif;
@@ -95,6 +100,14 @@
       font-style: italic;
       color: #464941;
       margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .quote span {
+      display: block;
+      font-size: 0.9em;
+      margin-top: 5px;
+      color: #464941;
     }
 
     .welcome-text p {
@@ -162,7 +175,9 @@
 <!-- Startseite Sektion mit Zitat -->
 <section id="home">
   <div id="home-content">
-    <p class="quote">„Allah hat sowohl die Krankheit als auch die Heilung erschaffen.“ - Hz. Muhammed (s.a.v.)</p>
+    <p class="quote">„Allah hat sowohl die Krankheit als auch die Heilung erschaffen.“
+      <span>- Hz. Muhammed (s.a.v.)</span>
+    </p>
     <div class="welcome-text">
       <h1>Willkommen in der Naturheilpraxis Belya!</h1>
       <p>In meiner Praxis steht Ihre Gesundheit und Ihr Wohlbefinden im Mittelpunkt. Mit individuell abgestimmten Behandlungen begleite ich Sie auf Ihrem Weg zu mehr Balance und Lebensqualität.</p>
