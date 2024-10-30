@@ -30,17 +30,25 @@
 
     /* Header und Navigation */
     header {
-      background-color: #f6eedf; /* Hintergrundfarbe passend zur Vorgabe */
-      color: #464941; /* Textfarbe für Navigation */
+      background-color: #f6eedf;
+      color: #464941;
       padding: 15px;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
     }
 
+    /* Logo Styling */
+    .logo img {
+      height: 50px; /* Höhe des Logos anpassen */
+      margin-left: 15px;
+    }
+
+    /* Navigation Styling */
     header nav a {
       color: #464941;
       margin: 0 15px;
@@ -53,26 +61,46 @@
       color: #5a7a4f; /* Grünton beim Hover */
     }
 
-    /* Sektionen Styling */
-    section {
+    /* Hintergrundbild für den Home-Bereich */
+    #home {
+      background: url('images/background.jpeg') no-repeat center center;
+      background-size: cover;
+      position: relative;
       padding: 100px 20px;
+      color: #464941;
       margin-top: 60px; /* Platz für die feste Navigation */
-      font-family: 'Garet', sans-serif;
     }
 
-    #home {
-      background-color: #f6eedf;
+    /* Overlay für Transparenz im Home-Bereich */
+    #home::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(246, 238, 223, 0.5); /* 50% Transparenz */
+      z-index: 1;
+    }
+
+    /* Text im Home-Bereich */
+    #home-content {
+      position: relative;
+      z-index: 2; /* Damit der Text über dem Overlay steht */
     }
 
     #behandlungen {
+      padding: 100px 20px;
       background-color: #f6eedf;
     }
 
     #ueber-mich {
+      padding: 100px 20px;
       background-color: #f6eedf;
     }
 
     #kontakt {
+      padding: 100px 20px;
       background-color: #f6eedf;
     }
 
@@ -103,8 +131,11 @@
 </head>
 <body>
 
-<!-- Header mit Navigation -->
+<!-- Header mit Logo und Navigation -->
 <header>
+  <div class="logo">
+    <img src="images/logo.jpeg" alt="Belya Naturheilpraxis Logo">
+  </div>
   <nav>
     <a href="#home">Home</a>
     <a href="#behandlungen">Behandlungen</a>
@@ -113,10 +144,12 @@
   </nav>
 </header>
 
-<!-- Startseite Sektion -->
+<!-- Startseite Sektion mit Hintergrundbild -->
 <section id="home">
-  <h1>Belya Naturheilpraxis</h1>
-  <p>Ihre Gesundheit in harmonischen Händen. Entdecken Sie unsere natürlichen Behandlungsmethoden.</p>
+  <div id="home-content">
+    <h1>Belya Naturheilpraxis</h1>
+    <p>Ihre Gesundheit in harmonischen Händen. Entdecken Sie unsere natürlichen Behandlungsmethoden.</p>
+  </div>
 </section>
 
 <!-- Behandlungen Sektion -->
