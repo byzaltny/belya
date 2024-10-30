@@ -10,12 +10,12 @@
     /* Font-Face für Maragsa und Garet hinzufügen */
     @font-face {
       font-family: 'Maragsa';
-      src: url('fonts/Maragsa.ttf') format('truetype'); /* Passe den Pfad an, falls nötig */
+      src: url('fonts/Maragsa.ttf') format('truetype');
     }
     
     @font-face {
       font-family: 'Garet';
-      src: url('fonts/Garet.ttf') format('truetype'); /* Passe den Pfad an, falls nötig */
+      src: url('fonts/Garet.ttf') format('truetype');
     }
 
     /* Grundlegendes Styling */
@@ -32,7 +32,7 @@
     header {
       background-color: #f6eedf;
       color: #464941;
-      padding: 15px;
+      padding: 20px;
       position: fixed;
       width: 100%;
       top: 0;
@@ -40,35 +40,48 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     /* Logo Styling */
     .logo img {
-      height: 50px; /* Höhe des Logos anpassen */
-      margin-left: 15px;
+      height: 70px;
+      margin-left: 20px;
     }
 
     /* Navigation Styling */
+    header nav {
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+    }
+
     header nav a {
       color: #464941;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      font-family: 'Maragsa', sans-serif; /* Maragsa für die Navigation */
+      font-family: 'Maragsa', sans-serif;
+      font-size: 1.1em;
     }
 
     header nav a:hover {
-      color: #5a7a4f; /* Grünton beim Hover */
+      color: #5a7a4f;
     }
 
-    /* Hintergrundbild für den Home-Bereich */
+    /* Hintergrundbild und Zitat im Home-Bereich */
     #home {
-      background: url('images/backgorund.jpeg') no-repeat center center;
+      background: url('images/background.jpeg') no-repeat center center;
       background-size: cover;
       position: relative;
-      padding: 100px 20px;
+      padding: 150px 20px;
       color: #464941;
-      margin-top: 60px; /* Platz für die feste Navigation */
+      margin-top: 80px;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     /* Overlay für Transparenz im Home-Bereich */
@@ -79,29 +92,37 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(246, 238, 223, 0.5); /* 50% Transparenz */
+      background-color: rgba(246, 238, 223, 0.5);
       z-index: 1;
     }
 
     /* Text im Home-Bereich */
     #home-content {
       position: relative;
-      z-index: 2; /* Damit der Text über dem Overlay steht */
+      z-index: 2;
+      max-width: 800px;
     }
 
-    #behandlungen {
-      padding: 100px 20px;
-      background-color: #f6eedf;
+    .quote {
+      font-family: 'Maragsa', sans-serif;
+      font-size: 1.5em;
+      font-style: italic;
+      color: #464941;
+      margin-bottom: 30px;
     }
 
-    #ueber-mich {
-      padding: 100px 20px;
-      background-color: #f6eedf;
+    .welcome-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
-    #kontakt {
+    section {
       padding: 100px 20px;
-      background-color: #f6eedf;
+      max-width: 800px;
+      margin: auto;
+      font-family: 'Garet', sans-serif;
+      color: #464941;
+      min-height: 500px;
     }
 
     h1, h2 {
@@ -109,9 +130,16 @@
       color: #464941;
     }
 
+    .treatment-list li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
     p {
       color: #464941;
       font-family: 'Garet', sans-serif;
+      line-height: 1.6;
+      font-size: 1.1em;
     }
 
     /* Button Styling */
@@ -119,14 +147,22 @@
       background-color: #5a7a4f;
       color: #f6eedf;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px;
       cursor: pointer;
       font-family: 'Maragsa', sans-serif;
+      font-size: 1em;
     }
 
     button:hover {
       background-color: #464941;
     }
+
+    /* Kontaktinformation Styling */
+    .contact-info {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
   </style>
 </head>
 <body>
@@ -134,7 +170,7 @@
 <!-- Header mit Logo und Navigation -->
 <header>
   <div class="logo">
-    <img src="images/logo.png" alt="Belya Naturheilpraxis Logo">
+    <img src="images/logo.jpeg" alt="Belya Naturheilpraxis Logo">
   </div>
   <nav>
     <a href="#home">Home</a>
@@ -144,31 +180,49 @@
   </nav>
 </header>
 
-<!-- Startseite Sektion mit Hintergrundbild -->
+<!-- Startseite Sektion mit Hintergrundbild und Zitat -->
 <section id="home">
   <div id="home-content">
-    <h1>Belya Naturheilpraxis</h1>
-    <p>Ihre Gesundheit in harmonischen Händen. Entdecken Sie unsere natürlichen Behandlungsmethoden.</p>
+    <p class="quote">„Allah hat sowohl die Krankheit als auch die Heilung erschaffen.“ - Hz. Muhammed (s.a.v.)</p>
+    <div class="welcome-text">
+      <h1>Willkommen in der Naturheilpraxis Belya!</h1>
+      <p>In meiner Praxis steht Ihre Gesundheit und Ihr Wohlbefinden im Mittelpunkt. Mit individuell abgestimmten Behandlungen begleite ich Sie auf Ihrem Weg zu mehr Balance und Lebensqualität.</p>
+      <p>Als erfahrene Heilpraktikerin kombiniere ich verschiedene Ansätze aus der Naturheilkunde, um Ihnen ganzheitliche und nachhaltige Lösungen für Ihre Gesundheit anzubieten. Meine Philosophie basiert auf einem natürlichen und ganzheitlichen Ansatz, der Körper, Geist und Seele in Einklang bringt.</p>
+    </div>
   </div>
 </section>
 
 <!-- Behandlungen Sektion -->
 <section id="behandlungen">
-  <h2>Behandlungen</h2>
-  <p>Hier finden Sie eine Übersicht unserer Behandlungsmethoden und Therapien.</p>
+  <h2>Übersicht der Behandlungen</h2>
+  <ul class="treatment-list">
+    <li><strong>Akupunktur</strong> – Traditionelle Technik zur Förderung des Energieflusses.</li>
+    <li><strong>Blutegeltherapie</strong> – Natürliche Methode zur Entgiftung und Schmerzlinderung.</li>
+    <li><strong>Infusionen (z.B. Vitamin C)</strong> – Zur Stärkung des Immunsystems und Förderung der Vitalität.</li>
+    <li><strong>Lymphdrainage</strong> – Unterstützt das Lymphsystem und fördert den Abtransport von Schlacken.</li>
+    <li><strong>Schröpfen</strong> – Verschiedene Techniken zur Förderung der Durchblutung und Linderung von Verspannungen.</li>
+    <li><strong>Beratungen</strong> – Individuelle Beratungen zu Ernährung, psychischer Gesundheit und Familienfragen.</li>
+  </ul>
+  <p>Jede Behandlung wird auf Ihre persönlichen Bedürfnisse abgestimmt, um bestmögliche Resultate zu erzielen.</p>
 </section>
 
 <!-- Über mich Sektion -->
 <section id="ueber-mich">
   <h2>Über mich</h2>
-  <p>Erfahren Sie mehr über meine Erfahrung und meinen Ansatz in der Naturheilkunde.</p>
+  <p>Mein Name ist Sükran Uzel. Ich habe ursprünglich als Hebamme gearbeitet, später als Betreuungsassistentin und bin nun als Heilpraktikerin tätig. Mit meiner langjährigen Erfahrung und einem ganzheitlichen Blick auf die Gesundheit begleite ich Sie gerne auf Ihrem Weg zu mehr Wohlbefinden und Vitalität.</p>
 </section>
 
 <!-- Kontakt Sektion -->
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p>Kontaktieren Sie uns für Termine und weitere Informationen.</p>
-  <button>Jetzt Kontakt aufnehmen</button>
+  <div class="contact-info">
+    <p><strong>Naturheilpraxis Belya</strong><br>
+    Heinrich-Sinz-Str. 33<br>
+    89335 Ichenhausen</p>
+    <p>Telefon: 0174 401 3437<br>
+    E-Mail: sukranuzel@outlook.de</p>
+    <p><strong>Behandlungen nur nach Vereinbarung.</strong></p>
+  </div>
 </section>
 
 </body>
